@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default}">
+<head>
+
+</head>
+<body>
+<div class="container">
+    <div>
+        <div class="col-md-6 mx-auto">
+            <div class="card border-secondary">
+                <form role="form" id="registrationForm">
+                    <div class="card-header">
+                        <h3><span>Create account</span></h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group" id="form-firstname">
+                            <label class="control-label" for="firstname">First name</label>
+                            <input name="firstname" id="firstname" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group" id="form-lastname">
+                            <label class="control-label" for="lastname">First name</label>
+                            <input name="lastname" id="lastname" type="text" class="form-control"/>
+                        </div>
+                        <div class="form-group" id="form-email">
+                            <label class="control-label" for="email">Email</label>
+                            <input name="email" id="email" type="email" class="form-control"/>
+                        </div>
+                        <div class="form-group" id="form-password">
+                            <label class="control-label" for="password">Password</label>
+                            <input name="password" id="password" type="password" class="form-control"/>
+                        </div>
+                        <div class="form-group" id="form-passwordConfirm">
+                            <label class="control-label" for="passwordconfirm">Password confirm</label>
+                            <input name="passwordconfirm" id="passwordconfirm" type="password" class="form-control"/>
+                        </div>
+                        <div class="form-group" id="form-country">
+                            <label class="control-label" for="country">Country</label>
+                            <select name="country" id="country" class="form-control">
+                                <option value="us">usa</option>
+                            </select>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6Ldlzg0UAAAAAPnN7xk6zLig7DwxN7rE1Ou_InVt" id="recaptcha" data-callback="recaptchaCallback"></div>
+                        <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha"/>
+                        <div class="form-group">
+                            <button id="registerSubmit" type="submit" class="btn btn-info btn-block"><span>Create account</span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

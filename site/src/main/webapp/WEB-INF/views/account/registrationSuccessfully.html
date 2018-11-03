@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html th:lang="${#locale.language}"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../resources/bootstrap_4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="alert alert-success">
+    <strong th:text="sssssssssss">Success!</strong>
+    <span th:text="aaaaaaaaaaaaaaa">An activation link has been sent to your e-mail.</span>
+</div>
+
+<script type="text/javascript">
+    setTimeout(function () {
+        window.location.replace('/signIn');
+    }, 2000)
+</script>
+</body>
+</html>

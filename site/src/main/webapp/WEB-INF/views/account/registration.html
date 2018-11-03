@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout/default}">
+<body>
+<div layout:fragment="content">
+    <div class="col-md-6 mx-auto">
+        <div class="card border-secondary">
+            <form role="form" id="registrationForm">
+                <div class="card-header">
+                    <h3><span th:text="#{registration.form.title}">Create account</span></h3>
+                </div>
+                <div class="card-body">
+                    <div class="form-group" id="form-firstname">
+                        <label class="control-label" for="firstname" th:text="#{registration.form.firstname}">First name</label>
+                        <input name="firstname" id="firstname" type="text" class="form-control" th:placeholder="#{registration.form.firstname.placeholder}"/>
+                    </div>
+                    <div class="form-group" id="form-lastname">
+                        <label class="control-label" for="lastname" th:text="#{registration.form.lastname}">Last name</label>
+                        <input name="lastname" id="lastname" type="text" class="form-control" th:placeholder="#{registration.form.lastname.placeholder}"/>
+                    </div>
+                    <div class="form-group" id="form-email">
+                        <label class="control-label" for="email" th:text="#{registration.form.email}">Email</label>
+                        <input name="email" id="email" type="email" class="form-control" th:placeholder="#{registration.form.email.placeholder}"/>
+                    </div>
+                    <div class="form-group" id="form-password">
+                        <label class="control-label" for="password" th:text="#{registration.form.password}">Password</label>
+                        <input name="password" id="password" type="password" class="form-control" th:placeholder="#{registration.form.password.placeholder}"/>
+                    </div>
+                    <div class="form-group" id="form-passwordConfirm">
+                        <label class="control-label" for="passwordconfirm" th:text="#{registration.form.passwordconfirm}">Password confirm</label>
+                        <input name="passwordconfirm" id="passwordconfirm" type="password" class="form-control" th:placeholder="#{registration.form.passwordconfirm.placeholder}"/>
+                    </div>
+                    <div class="form-group" id="form-country">
+                        <label class="control-label" for="country" th:text="#{registration.form.country}">Country</label>
+                        <select name="country" id="country" class="form-control">
+                            <option value="us">usa</option>
+                        </select>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6Ldlzg0UAAAAAPnN7xk6zLig7DwxN7rE1Ou_InVt" id="recaptcha" data-callback="recaptchaCallback"></div>
+                    <input type="hidden" class="hiddenRecaptcha required" name="hiddenRecaptcha" id="hiddenRecaptcha"/>
+                    <hr />
+                    <div class="form-group">
+                        <button id="registerSubmit" type="submit" class="btn btn-info btn-block"><span th:text="#{registration.form.button.submit}">Create account</span></button>
+                    </div>
+                    <hr />
+                    <p>
+                        <span th:text="#{registration.form.text.goBackToTheHomepage}"></span>
+                        <a th:href="@{/}"><span th:text="#{registration.form.text.go}"></span></a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../resources/js/registration.js" th:src="@{../resources/js/registration.js}"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</div>
+</body>
+</html>

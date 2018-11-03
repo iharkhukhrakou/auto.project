@@ -1,0 +1,39 @@
+/* for navbar */
+
+
+/* for slider types */
+.type-item {
+    width: 275px;
+    height: 196px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.type-image-automobile {
+    background-image:url("/resources/images/automobile.jpg");
+}
+
+.type-image-motorcycle {
+    background-image:url("/resources/images/motorcycle.jpg");
+}
+
+.type-image-snowmobile {
+    background-image:url("/resources/images/snowmobile.jpg");
+}
+
+.type-image-boat {
+    background-image:url("/resources/images/boat.jpg");
+}
+
+.type-image-atv {
+    background-image:url("/resources/images/atv.jpg");
+}
+
+.type-image-jetski {
+    background-image:url("/resources/images/jetski.jpg");
+}
+
+.type-image-dirtbike {
+    background-image:url("/resources/images/dirtbike.jpg");
+}
